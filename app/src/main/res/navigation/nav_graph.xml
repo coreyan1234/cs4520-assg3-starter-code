@@ -11,6 +11,16 @@
         android:name="com.cs4520.assignment3.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_mvpFragment"
+            app:destination="@id/mvpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mvpFragment"
+        android:name="com.cs4520.assignment3.fragments.MvpFragment"
+        android:label="Mvp"
+        tools:layout="@layout/fragment_mvp">
     </fragment>
 
 

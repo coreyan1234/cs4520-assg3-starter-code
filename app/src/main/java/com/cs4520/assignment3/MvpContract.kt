@@ -2,9 +2,11 @@ package com.cs4520.assignment3
 
 interface MvpContract {
     interface View {
-        fun showResult(result: Double)
+        fun showResult(result: String)
         fun clearInputs()
-        fun showToast(message: String)
+        fun showToastError()
+        fun getNum1(): Double
+        fun getNum2(): Double
     }
 
     interface Model {
