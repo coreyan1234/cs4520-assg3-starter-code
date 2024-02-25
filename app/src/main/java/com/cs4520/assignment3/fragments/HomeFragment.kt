@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
     private fun navigateToMVPFragment() {
         // Navigate to MVPFragment
         val transaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, MVPFragment())
+        transaction.replace(R.id.fragment_container, MvpFragment())
         transaction.addToBackStack(null)
         transaction.commit()
     }
@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
     private fun navigateToMVVMFragment() {
         // Navigate to MVVMFragment
         val transaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, MVVMFragment())
+        transaction.replace(R.id.fragment_container, MvvmFragment())
         transaction.addToBackStack(null)
         transaction.commit()
     }
