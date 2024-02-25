@@ -8,9 +8,6 @@ import androidx.fragment.app.Fragment
 import com.cs4520.assignment3.R
 import com.cs4520.assignment3.databinding.FragmentHomeBinding
 
-//import com.cs4520.assignment3.fragments.ARG_PARAM1
-//import com.cs4520.assignment3.fragments.ARG_PARAM2
-
 /**
  * A simple [Fragment] subclass.
  * Use the [HomeFragment.newInstance] factory method to
