@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeFragment_to_mvpFragment"
             app:destination="@id/mvpFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mvvmFragment"
+            app:destination="@id/mvvmFragment" />
     </fragment>
 
     <fragment
@@ -21,6 +24,13 @@
         android:name="com.cs4520.assignment3.fragments.MvpFragment"
         android:label="Mvp"
         tools:layout="@layout/fragment_mvp">
+    </fragment>
+
+    <fragment
+        android:id="@+id/mvvmFragment"
+        android:name="com.cs4520.assignment3.fragments.MvvmFragment"
+        android:label="Mvvm"
+        tools:layout="@layout/fragment_mvvm">
     </fragment>
 
 
