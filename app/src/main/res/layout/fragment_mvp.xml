@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#c4b8e1"
-    tools:context=".fragments.MvpFragment">
+    tools:context=".mvp.MvpFragment">
 
     <EditText
         android:id="@+id/editTextNum1"

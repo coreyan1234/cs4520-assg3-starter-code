@@ -1,15 +1,11 @@
-package com.cs4520.assignment3.fragments
+package com.cs4520.assignment3.mvp
 
-import android.icu.util.IslamicCalendar.CalculationType
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.cs4520.assignment3.MvpContract
-import com.cs4520.assignment3.MvpPresenter
-import com.cs4520.assignment3.R
 import com.cs4520.assignment3.databinding.FragmentMvpBinding
 
 class MvpFragment : Fragment(), MvpContract.View {

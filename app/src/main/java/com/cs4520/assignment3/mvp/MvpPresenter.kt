@@ -1,4 +1,7 @@
-package com.cs4520.assignment3
+package com.cs4520.assignment3.mvp
+
+import com.cs4520.assignment3.mvp.MvpContract
+import com.cs4520.assignment3.mvp.MvpModel
 
 class MvpPresenter(private val view: MvpContract.View): MvpContract.Presenter {
     private val model: MvpContract.Model = MvpModel()

@@ -1,4 +1,4 @@
-package com.cs4520.assignment3
+package com.cs4520.assignment3.mvp
 
 class MvpModel: MvpContract.Model {
     override fun add(num1: Double, num2: Double): Double {
