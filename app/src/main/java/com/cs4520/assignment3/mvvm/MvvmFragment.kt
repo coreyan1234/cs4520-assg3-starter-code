@@ -35,6 +35,11 @@ class MvvmFragment : Fragment() {
 
         viewModel = ViewModelProvider(this)[MvvmViewModel::class.java]
 
+        // Survive orientation change
+        viewModel.result.observe(viewLifecycleOwner) { result ->
+            binding.textViewResult.text = result
+        }
+
         binding.apply {
             buttonAdd.setOnClickListener { calculate("ADD") }
             buttonSubtract.setOnClickListener { calculate("SUBTRACT") }
@@ -44,10 +49,10 @@ class MvvmFragment : Fragment() {
     }
 
     private fun calculate(operation: String) {
-        val num1 = binding.editTextNum1.text.toString().toDoubleOrNull()
-        val num2 = binding.editTextNum2.text.toString().toDoubleOrNull()
+        val num1 = binding.editTextNum1.text.toString().toDoubleOrNull() ?: Double.NaN
+        val num2 = binding.editTextNum2.text.toString().toDoubleOrNull() ?: Double.NaN
 
-        if (num1 == null || num2 == null) {
+        if (!viewModel.isValidInput(num1, num2)) {
             showToastError()
             return
         }
@@ -68,7 +73,7 @@ class MvvmFragment : Fragment() {
             return
         }
 
-        binding.textViewResult.text = getString(R.string.result_text, result.toString())
+        viewModel.setResultText("Result: $result")
         clearInputs()
     }
 
